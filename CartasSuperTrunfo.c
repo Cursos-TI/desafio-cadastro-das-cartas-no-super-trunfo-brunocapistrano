@@ -2,11 +2,14 @@
 
 int main(){
 
-    char estado[1], codigoDaCarta[3], nomeDaCidade;
+    char estado[1], codigoDaCarta[3], nomeDaCidade[50];
     int populacao;
     float areaDaCidade;
     float pib;
     int numerosDePontosTuristicos;
+
+    float densidadePopulacional;
+    float pibPerCapta;
 
     printf("\n--- Iniciando A Criação De Uma Nova Cidade ---\n\n");
 
@@ -40,6 +43,9 @@ int main(){
 
     printf("\n");
 
+    densidadePopulacional = populacao / areaDaCidade;
+    pibPerCapta = pib / populacao;
+
     printf("--- Nova Carta Criada ---\n");
     printf("Estado: %s\n", estado);
     printf("Código: %s\n", codigoDaCarta);
@@ -48,8 +54,9 @@ int main(){
     printf("Área: %.2f km²\n", areaDaCidade);
     printf("PIB: %.2f\n", pib);
     printf("Número de Pontos Turísticos: %d\n", numerosDePontosTuristicos);
+    printf("Densidade Populacional: %.2f\n hab/km²", densidadePopulacional);
+    printf("PIB per Capta: %.2f\n reais", pibPerCapta);
     printf("--- Fim ---"); 
 
     return 0;
-
 }
